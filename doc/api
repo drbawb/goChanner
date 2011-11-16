@@ -1,0 +1,9 @@
+This is a scratchapd about the API design.
+This document is *not* an authoritative documentation of the API!
+
+types:
+interface Thread: a tree structure of threads. doubly linked list(?) (convert to tree structure based on replytags) or flat structure like it's displayed?
+Thread.ExtractMeta(): extracts the metadata and stores it in the threads state
+Thread.ExtractBody(): extracts the body and stores it in the threads state.
+
+//note, those are just the interface methods, implementations vary based on what board we're trying to scrape!

@@ -1,0 +1,10 @@
+goChanner
+
+goChanner is a CLI imageboard browing and archiving tool.
+
+It is in very early stages of development, and the API will be changing relatively quickly.
+
+In the future, we will offer many command line flags for various archival options, in addition to an interactive mode which will use an (n)curses based GUI to browse the board (sans-images.)
+
+This project was created so that imageboards can be browsed without viewing potentially NSFw images.
+In addition this project should provide a powerful command line tool for interacting with various imageboards from the shell.
