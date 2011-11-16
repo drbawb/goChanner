@@ -8,3 +8,7 @@ In the future, we will offer many command line flags for various archival option
 
 This project was created so that imageboards can be browsed without viewing potentially NSFw images.
 In addition this project should provide a powerful command line tool for interacting with various imageboards from the shell.
+
+Current usage (updated 11/15/2011):
+to build, gomake shoud suffice
+to run, ./gochan will list the authors, trips, and subjects of all posts on the front page of the hardcoded board
