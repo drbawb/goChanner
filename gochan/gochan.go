@@ -14,6 +14,7 @@ import (
 	"html"
 	"net/http"
 	"os"
+  "gochanner/thread"
 )
 
 func main() {
@@ -30,12 +31,12 @@ func main() {
 	}
   threads := buildThreads(parse)
   for ix := 0; ix < len(threads); ix++ {
-    fmt.Printf("ID: %s Author: %s / %s \n Subj: %s \n-----\n", threads[ix].ThreadNo, threads[ix].Author.Name, threads[ix].Author.Trip, threads[ix].Subject)
+    fmt.Printf("id: %s Author: %s / %s \n Subj: %s \n-----\n", threads[ix].ThreadNo, threads[ix].Author.Name, threads[ix].Author.Trip, threads[ix].Subject)
   }
 }
 
-func buildThreads(in *html.Node) []*Thread {
-  var threadOut []*Thread
+func buildThreads(in *html.Node) []*thread.Thread {
+  var threadOut []*thread.Thread
 
   //outer loop over in (usually a full HTML document parse tree)
   //looking for <div class="thread"> or equivalent; this should be handled by the board driver.
@@ -44,7 +45,7 @@ func buildThreads(in *html.Node) []*Thread {
 			//loop over the div's attribute array to determine it's CSS class
       for aix := 0; aix < len(in.Child[ix].Attr); aix++ {
 				if in.Child[ix].Attr[aix].Key == "class" && in.Child[ix].Attr[aix].Val == "thread" {
-					t := new(Thread)
+					t := new(thread.Thread)
           t.Build(in.Child[ix])
 					threadOut = append(threadOut, t)
 				}

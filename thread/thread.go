@@ -9,9 +9,9 @@ See doc/LICENSE for licensing restrictions.
 "I'm on the verge, I'm on the verge - unravelling with every word."
 */
 
-package main
+package thread
 import (
-  //"fmt"
+//  "fmt"
   "regexp"
 	"html"
   "strings"
